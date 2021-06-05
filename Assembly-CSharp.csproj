@@ -47,29 +47,30 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Scripts\FPSController\FpsControllerLPFP.cs" />
-     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Demo_Scene_Components\Scripts\DebrisScript.cs" />
-     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Casings_&amp;_Projectiles\GrenadeScript.cs" />
+     <Compile Include="Assets\prefabs\Low Poly FPS Pack - Free (Sample)\Components\Scripts\FPSController\FpsControllerLPFP.cs" />
+     <Compile Include="Assets\prefabs\Low Poly FPS Pack - Free (Sample)\Components\Demo_Scene_Components\Scripts\DebrisScript.cs" />
+     <Compile Include="Assets\prefabs\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Casings_&amp;_Projectiles\GrenadeScript.cs" />
      <Compile Include="Assets\Scripts\Fire.cs" />
      <Compile Include="Assets\Scripts\Zombie\Dusman.cs" />
-     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Demo_Scene_Components\Scripts\ExplosiveBarrelScript.cs" />
-     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Demo_Scene_Components\Scripts\TargetScript.cs" />
+     <Compile Include="Assets\prefabs\Low Poly FPS Pack - Free (Sample)\Components\Demo_Scene_Components\Scripts\ExplosiveBarrelScript.cs" />
+     <Compile Include="Assets\prefabs\Low Poly FPS Pack - Free (Sample)\Components\Demo_Scene_Components\Scripts\TargetScript.cs" />
      <Compile Include="Assets\Scripts\Zombie\Delayeffect.cs" />
-     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Casings_&amp;_Projectiles\CasingScript.cs" />
-     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Misc\LookAtCamera.cs" />
-     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Weapon_Scripts\HandgunScriptLPFP.cs" />
+     <Compile Include="Assets\prefabs\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Casings_&amp;_Projectiles\CasingScript.cs" />
+     <Compile Include="Assets\prefabs\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Misc\LookAtCamera.cs" />
+     <Compile Include="Assets\prefabs\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Weapon_Scripts\HandgunScriptLPFP.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Explosions_&amp;_Impacts\ExplosionScript.cs" />
+     <Compile Include="Assets\prefabs\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Explosions_&amp;_Impacts\ExplosionScript.cs" />
      <Compile Include="Assets\Scripts\Zombie\Zombie.cs" />
-     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Explosions_&amp;_Impacts\ImpactScript.cs" />
+     <Compile Include="Assets\prefabs\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Explosions_&amp;_Impacts\ImpactScript.cs" />
      <Compile Include="Assets\images\Cannoball.cs" />
      <Compile Include="Assets\Scripts\Zombie\Ates.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\NoteAppear.cs" />
-     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Weapon_Scripts\AutomaticGunScriptLPFP.cs" />
+     <Compile Include="Assets\prefabs\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Weapon_Scripts\AutomaticGunScriptLPFP.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
-     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Bullet\BulletScript.cs" />
-     <None Include="Assets\AllSkyFree\AllSkyFree_Readme.txt" />
+     <Compile Include="Assets\prefabs\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Bullet\BulletScript.cs" />
+     <Compile Include="Assets\menu\MenuScript.cs" />
+     <None Include="Assets\prefabs\AllSkyFree\AllSkyFree_Readme.txt" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.5f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
