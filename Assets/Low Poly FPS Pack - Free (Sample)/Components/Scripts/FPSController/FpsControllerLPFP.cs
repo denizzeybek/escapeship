@@ -266,7 +266,7 @@ namespace FPSControllerLPFP
             {
                 if (_audioSource.isPlaying)
                 {
-                    _audioSource.Pause();
+                    _audioSource.Stop(); //burası
                 }
             }
         }
