@@ -5,9 +5,10 @@ using UnityEngine.UI;
 // ----- Low Poly FPS Pack Free Version -----
 public class HandgunScriptLPFP : MonoBehaviour {
 
-	//Animator component attached to weapon
-	Animator anim;
-
+	//Animator component attached to weaponsdfs
+	Animator anim; 
+	public float health = 2000f;
+	public float range = 100f;
 	[Header("Gun Camera")]
 	//Main gun camera
 	public Camera gunCamera;
@@ -207,6 +208,7 @@ public class HandgunScriptLPFP : MonoBehaviour {
 		if(Input.GetButton("Fire2") && !isReloading && !isRunning && !isInspecting) 
 		{
 			
+			//Shoot();
 			gunCamera.fieldOfView = Mathf.Lerp (gunCamera.fieldOfView,
 				aimFov, fovSpeed * Time.deltaTime);
 			
@@ -328,6 +330,8 @@ public class HandgunScriptLPFP : MonoBehaviour {
 		//Shooting 
 		if (Input.GetMouseButtonDown (0) && !outOfAmmo && !isReloading && !isInspecting && !isRunning) 
 		{
+			Shoot();	
+			Debug.Log("shoot");
 			anim.Play ("Fire", 0, 0f);
 	
 			muzzleParticles.Emit (1);
@@ -343,6 +347,7 @@ public class HandgunScriptLPFP : MonoBehaviour {
 
 			if (!isAiming) //if not aiming
 			{
+				//Shoot();
 				anim.Play ("Fire", 0, 0f);
 		
 				muzzleParticles.Emit (1);
@@ -352,9 +357,11 @@ public class HandgunScriptLPFP : MonoBehaviour {
 					//Emit random amount of spark particles
 					sparkParticles.Emit (Random.Range (1, 6));
 				}
+				
 			} 
 			else //if aiming
 			{
+				Shoot();
 				anim.Play ("Aim Fire", 0, 0f);
 					
 				//If random muzzle is false
@@ -381,7 +388,9 @@ public class HandgunScriptLPFP : MonoBehaviour {
 					}
 				}
 			}
-				
+
+			// burası
+
 			//Spawn bullet at bullet spawnpoint
 			var bullet = (Transform)Instantiate (
 				Prefabs.bulletPrefab,
@@ -391,7 +400,7 @@ public class HandgunScriptLPFP : MonoBehaviour {
 			//Add velocity to the bullet
 			bullet.GetComponent<Rigidbody>().velocity = 
 			bullet.transform.forward * bulletForce;
-
+			Debug.Log("shoot aiming"); 
 			//Spawn casing prefab at spawnpoint
 			Instantiate (Prefabs.casingPrefab, 
 				Spawnpoints.casingSpawnPoint.transform.position, 
@@ -568,6 +577,22 @@ public class HandgunScriptLPFP : MonoBehaviour {
 		currentAmmo = ammo;
 		outOfAmmo = false;
 	}
+
+	void Shoot(){
+        RaycastHit hit;
+        if(Physics.Raycast(gunCamera.transform.position, gunCamera.transform.forward, out hit, range)){
+            Debug.Log(hit.transform.name);
+
+			Dusman target = hit.transform.GetComponent<Dusman>();
+			if(target != null){
+				target.HasarVer(bulletForce);
+			}
+
+			 
+        }
+
+		Debug.Log("shoot");
+    }
 
 	//Enable bullet in mag renderer after set amount of time
 	private IEnumerator ShowBulletInMag () {
