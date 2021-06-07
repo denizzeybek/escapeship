@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HandgunScriptLPFP : MonoBehaviour {
 
 	//Animator component attached to weaponsdfs
+	bool gameHasEnded = false;
 	public float health = 2000f;
 	public float cur_health = 0f;
 	public bool alive = true;
@@ -207,6 +208,18 @@ public class HandgunScriptLPFP : MonoBehaviour {
 	public void GameOver(){
 		GameOverScreen.Setup();
 	}
+
+	public void EndGame(){
+		gameHasEnded = true;
+		Debug.Log("Game Over");
+
+	}
+
+	public void CompleteLevel(){
+		Debug.Log("Complete  Level");
+	}
+
+
 	private void LateUpdate () {
 		//Weapon sway
 		if (weaponSway == true) {

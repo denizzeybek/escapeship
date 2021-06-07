@@ -64,6 +64,8 @@
      <Compile Include="Assets\ModularFirstPersonController\FirstPersonController\FirstPersonController.cs" />
      <Compile Include="Assets\HealtBarScript.cs" />
      <Compile Include="Assets\GameOverScript.cs" />
+     <Compile Include="Assets\EndTrigger.cs" />
+     <Compile Include="Assets\GameEndScript.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
