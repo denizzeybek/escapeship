@@ -118,6 +118,9 @@ namespace FPSControllerLPFP
         /// Checks if the character is on the ground.
         private void OnCollisionStay()
         {
+            // değişiklik
+            Physics.gravity = new Vector3(0, -65.0f, 0);
+
             var bounds = _collider.bounds;
             var extents = bounds.extents;
             var radius = extents.x - 0.01f;
@@ -127,6 +130,7 @@ namespace FPSControllerLPFP
             for (var i = 0; i < _groundCastResults.Length; i++)
             {
                 _groundCastResults[i] = new RaycastHit();
+                Debug.Log("hitted !!");
             }
 
             _isGrounded = true;
@@ -267,6 +271,7 @@ namespace FPSControllerLPFP
                 if (_audioSource.isPlaying)
                 {
                     _audioSource.Stop(); //burası
+                     
                 }
             }
         }
