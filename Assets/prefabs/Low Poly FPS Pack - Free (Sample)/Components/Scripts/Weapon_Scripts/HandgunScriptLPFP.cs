@@ -6,8 +6,12 @@ using UnityEngine.UI;
 public class HandgunScriptLPFP : MonoBehaviour {
 
 	//Animator component attached to weaponsdfs
-	Animator anim; 
 	public float health = 2000f;
+	public float cur_health = 0f;
+	public bool alive = true;
+    public GameOverScript GameOverScreen;
+
+	Animator anim; 
 	public float range = 100f;
 	[Header("Gun Camera")]
 	//Main gun camera
@@ -180,8 +184,29 @@ public class HandgunScriptLPFP : MonoBehaviour {
 
 		//Set the shoot sound to audio source
 		shootAudioSource.clip = SoundClips.shootSound;
+		cur_health = health;
 	}
 
+	public void TakeDamage(float amount){
+		if(!alive){
+			return;
+		}
+		health -= amount;
+	}
+	void OnTriggerEnter(Collider other){
+        if(other.gameObject.tag == "Enemy"){
+            health -= 50f;
+        }
+		if(health <= 0){ 
+			GameOver();
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
+		}
+    }
+
+	public void GameOver(){
+		GameOverScreen.Setup();
+	}
 	private void LateUpdate () {
 		//Weapon sway
 		if (weaponSway == true) {
@@ -207,7 +232,10 @@ public class HandgunScriptLPFP : MonoBehaviour {
 		//Toggle camera FOV when right click is held down
 		if(Input.GetButton("Fire2") && !isReloading && !isRunning && !isInspecting) 
 		{
-			
+			if(health <= 0)
+         	{
+             Destroy(gameObject);
+         	}
 			//Shoot();
 			gunCamera.fieldOfView = Mathf.Lerp (gunCamera.fieldOfView,
 				aimFov, fovSpeed * Time.deltaTime);

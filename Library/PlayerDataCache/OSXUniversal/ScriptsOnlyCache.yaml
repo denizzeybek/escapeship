@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - ExplosionScript
     - FPSControllerLPFP.FpsControllerLPFP
     - Fire
+    - GameOverScript
     - GrenadeScript
     - HandgunScriptLPFP
     - HealtBarScript
@@ -160,6 +161,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 50276}
     - Class: 114
       Script: {instanceID: 968208}
+    - Class: 114
+      Script: {instanceID: 1896578}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -434,7 +437,7 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: d4b0b36e2e3c1da4a847c8beb83cbcc8
+      Hash: 875706829ed1cf770bed01bfa018e796
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Dusman
@@ -614,7 +617,7 @@ ScriptsOnlyBuild:
     className: EventSystem
   - hash:
       serializedVersion: 2
-      Hash: dab41b0fda5068f52bfe95eb7ae7ee72
+      Hash: 39cbb431908533f3eb0a994d2f821559
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HandgunScriptLPFP
@@ -852,6 +855,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HealtBarScript
+  - hash:
+      serializedVersion: 2
+      Hash: 930b2a7c015542327cee6af349728cdd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOverScript
   platform: 2
   scenePathNames:
   - Assets/menu.unity
