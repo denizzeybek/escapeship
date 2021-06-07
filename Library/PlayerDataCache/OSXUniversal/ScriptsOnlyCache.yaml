@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - ExplosionScript
     - FPSControllerLPFP.FpsControllerLPFP
     - Fire
+    - GameEndScript
     - GameOverScript
     - GrenadeScript
     - HandgunScriptLPFP
@@ -163,6 +164,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 968208}
     - Class: 114
       Script: {instanceID: 1896578}
+    - Class: 114
+      Script: {instanceID: 2741302}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -861,6 +864,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameOverScript
+  - hash:
+      serializedVersion: 2
+      Hash: 677439ea571dd26d8ce3b5601ef9be4c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EndTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: c35f921944e777e4ac8e43356dff0d55
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameEndScript
   platform: 2
   scenePathNames:
   - Assets/menu.unity
