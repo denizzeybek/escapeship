@@ -33,7 +33,7 @@ public class Zombie : MonoBehaviour
 
             mesafe = Vector3.Distance(transform.position, hedef.position);
 
-            if (mesafe <= 50)
+            if (mesafe <= 5000)
             {
                 agent.enabled = true;
                 agent.destination = hedef.position;
