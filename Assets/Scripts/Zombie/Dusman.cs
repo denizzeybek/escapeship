@@ -5,7 +5,7 @@ using UnityEngine;
 public class Dusman : MonoBehaviour
 {
     public float can = 100;
-    public float damage = 100f;
+    public float damage = 200f;
     private Animator anim;
     GameObject target;
     public bool öldümü = false;
